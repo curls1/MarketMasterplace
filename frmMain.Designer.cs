@@ -10,10 +10,10 @@
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnVendor = new System.Windows.Forms.Button();
+            this.btnEntertainer = new System.Windows.Forms.Button();
+            this.btnVolunteer = new System.Windows.Forms.Button();
+            this.btnVisitor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,60 +56,60 @@
             // mnuFileOpen
             // 
             this.mnuFileOpen.Name = "mnuFileOpen";
-            this.mnuFileOpen.Size = new System.Drawing.Size(104, 22);
+            this.mnuFileOpen.Size = new System.Drawing.Size(117, 24);
             this.mnuFileOpen.Text = "&Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(104, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(117, 24);
             this.mnuFileExit.Text = "E&xit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
-            // button1
+            // btnVendor
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(88, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 57);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Vendor";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVendor.BackColor = System.Drawing.Color.DimGray;
+            this.btnVendor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendor.Location = new System.Drawing.Point(88, 177);
+            this.btnVendor.Name = "btnVendor";
+            this.btnVendor.Size = new System.Drawing.Size(140, 57);
+            this.btnVendor.TabIndex = 3;
+            this.btnVendor.Text = "Vendor";
+            this.btnVendor.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEntertainer
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(377, 283);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 57);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Entertainer";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEntertainer.BackColor = System.Drawing.Color.DimGray;
+            this.btnEntertainer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntertainer.Location = new System.Drawing.Point(377, 283);
+            this.btnEntertainer.Name = "btnEntertainer";
+            this.btnEntertainer.Size = new System.Drawing.Size(145, 57);
+            this.btnEntertainer.TabIndex = 4;
+            this.btnEntertainer.Text = "Entertainer";
+            this.btnEntertainer.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnVolunteer
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(377, 177);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 57);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Volunteer";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnVolunteer.BackColor = System.Drawing.Color.DimGray;
+            this.btnVolunteer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolunteer.Location = new System.Drawing.Point(377, 177);
+            this.btnVolunteer.Name = "btnVolunteer";
+            this.btnVolunteer.Size = new System.Drawing.Size(145, 57);
+            this.btnVolunteer.TabIndex = 5;
+            this.btnVolunteer.Text = "Volunteer";
+            this.btnVolunteer.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnVisitor
             // 
-            this.button4.BackColor = System.Drawing.Color.DimGray;
-            this.button4.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(88, 283);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 57);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Visitor";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnVisitor.BackColor = System.Drawing.Color.DimGray;
+            this.btnVisitor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisitor.Location = new System.Drawing.Point(88, 283);
+            this.btnVisitor.Name = "btnVisitor";
+            this.btnVisitor.Size = new System.Drawing.Size(140, 57);
+            this.btnVisitor.TabIndex = 6;
+            this.btnVisitor.Text = "Visitor";
+            this.btnVisitor.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -125,10 +125,10 @@
             this.BackColor = System.Drawing.Color.YellowGreen;
             this.ClientSize = new System.Drawing.Size(618, 436);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVisitor);
+            this.Controls.Add(this.btnVolunteer);
+            this.Controls.Add(this.btnEntertainer);
+            this.Controls.Add(this.btnVendor);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Maiandra GD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,9 +150,9 @@
     private System.Windows.Forms.ToolStripMenuItem mnuFile;
     private System.Windows.Forms.ToolStripMenuItem mnuFileOpen;
     private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button btnVendor;
+    private System.Windows.Forms.Button btnEntertainer;
+    private System.Windows.Forms.Button btnVolunteer;
+    private System.Windows.Forms.Button btnVisitor;
     private System.Windows.Forms.PictureBox pictureBox1;
 }

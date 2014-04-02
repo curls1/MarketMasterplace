@@ -211,12 +211,6 @@ public partial class frmMain : Form
         Close();
     }
 
-    // The btnOK_Click method XXXX.
-    private void btnOK_Click(object sender, EventArgs e)
-    {
-        MessageBox.Show("Happy New Year!");
-    }
-
     // When File-Open is clicked, the program gets the filename that the user wishes to use for the 
     // application & stores the name in the class-scope variable that other methods will use.
     private void mnuFileOpen_Click(object sender, EventArgs e)
@@ -242,5 +236,4 @@ public partial class frmMain : Form
 
     }
 
-   
 }
