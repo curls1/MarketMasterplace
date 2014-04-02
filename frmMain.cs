@@ -33,6 +33,11 @@ public partial class frmMain : Form
     private string mUserFile;
     private OleDbConnection mDB;
 
+    private void frmMain_Load(object sender, EventArgs e)
+    {
+
+    }
+
     // The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
     // input form object and assigns the equivalent value to its corresponding variable. (This one handles int data.)
     private bool validateInput(TextBox txtInput, int min, int max, out int userInput)
@@ -237,5 +242,7 @@ public partial class frmMain : Form
         // Add code here to actually load the data and display where appropriate.
 
     }
+
+
 
 }

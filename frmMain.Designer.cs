@@ -22,7 +22,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.DimGray;
-            this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(250, 361);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(119, 57);
@@ -38,7 +38,7 @@
             this.mnuFile});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(618, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(618, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -47,10 +47,10 @@
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFileOpen,
             this.mnuFileExit});
-            this.mnuFile.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuFile.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(45, 23);
+            this.mnuFile.Size = new System.Drawing.Size(46, 24);
             this.mnuFile.Text = "&File";
             // 
             // mnuFileOpen
@@ -70,7 +70,7 @@
             // btnVendor
             // 
             this.btnVendor.BackColor = System.Drawing.Color.DimGray;
-            this.btnVendor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendor.Location = new System.Drawing.Point(88, 177);
             this.btnVendor.Name = "btnVendor";
             this.btnVendor.Size = new System.Drawing.Size(140, 57);
@@ -81,7 +81,7 @@
             // btnEntertainer
             // 
             this.btnEntertainer.BackColor = System.Drawing.Color.DimGray;
-            this.btnEntertainer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntertainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntertainer.Location = new System.Drawing.Point(377, 283);
             this.btnEntertainer.Name = "btnEntertainer";
             this.btnEntertainer.Size = new System.Drawing.Size(145, 57);
@@ -92,7 +92,7 @@
             // btnVolunteer
             // 
             this.btnVolunteer.BackColor = System.Drawing.Color.DimGray;
-            this.btnVolunteer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolunteer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolunteer.Location = new System.Drawing.Point(377, 177);
             this.btnVolunteer.Name = "btnVolunteer";
             this.btnVolunteer.Size = new System.Drawing.Size(145, 57);
@@ -103,7 +103,7 @@
             // btnVisitor
             // 
             this.btnVisitor.BackColor = System.Drawing.Color.DimGray;
-            this.btnVisitor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisitor.Location = new System.Drawing.Point(88, 283);
             this.btnVisitor.Name = "btnVisitor";
             this.btnVisitor.Size = new System.Drawing.Size(140, 57);
@@ -131,10 +131,11 @@
             this.Controls.Add(this.btnVendor);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Maiandra GD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
