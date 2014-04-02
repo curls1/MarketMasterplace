@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Drawing;
-using System.Windows.Forms;
+using System.Windows.Forms;               // For UI controls.
+using System.Threading;                   // When using menus and needing to control threading.
+using System.Data.OleDb;                  // For OLE DB objects (also added reference to System.Data).
+using System.Collections;                 // For using ArrayLists.
+using System.IO;                          // For some file methods, when using file menus.
+using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
+using System.Drawing;                     // color, interface
+
+using MarketMasterplace.lib;
 
 namespace MarketMasterplace.lib
 
 {
-    class NLDataGridView : System.Windows.Forms.DataGridView
+    public class NLDataGridView : System.Windows.Forms.DataGridView
     {
 
         public void configureDefault()
