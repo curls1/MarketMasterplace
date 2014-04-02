@@ -32,18 +32,26 @@ namespace MarketMasterplace.lib
 
         public static DataSet execQuery(string sql)
         {
+            mConn.Open();
+
             OleDbCommand cmd = new OleDbCommand(sql, mConn);
             IDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
+
+            mConn.Close();
 
             return ds;
         }
 
         public static void execNonQuery(string sql)
         {
+            mConn.Open();
+
             OleDbCommand cmd = new OleDbCommand(sql, mConn);
             cmd.ExecuteNonQuery();
+
+            mConn.Close();
         }
 
     }
