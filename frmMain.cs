@@ -1,4 +1,6 @@
-﻿using System;
+﻿//THIS IS AN EDIT FROM JIM
+
+using System;
 using System.Windows.Forms;               // For UI controls.
 using System.Threading;                   // When using menus and needing to control threading.
 using System.Data.OleDb;                  // For OLE DB objects (also added reference to System.Data).
