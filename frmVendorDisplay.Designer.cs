@@ -53,7 +53,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(130, 321);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(661, 246);
             this.dataGridView1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.textBox1.Location = new System.Drawing.Point(18, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(313, 27);
             this.textBox1.TabIndex = 1;
@@ -86,7 +86,7 @@
             this.button1.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.button1.Location = new System.Drawing.Point(130, 575);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 46);
             this.button1.TabIndex = 8;
@@ -110,7 +110,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.textBox2.Location = new System.Drawing.Point(18, 129);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(313, 27);
             this.textBox2.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.textBox3.Location = new System.Drawing.Point(380, 129);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(313, 27);
             this.textBox3.TabIndex = 11;
@@ -154,7 +154,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.textBox4.Location = new System.Drawing.Point(380, 209);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(313, 27);
             this.textBox4.TabIndex = 13;
@@ -176,7 +176,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.textBox5.Location = new System.Drawing.Point(380, 45);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(313, 27);
             this.textBox5.TabIndex = 15;
@@ -248,7 +248,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVendorDisplay";
             this.Text = "Display Vendors";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
