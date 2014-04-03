@@ -24,7 +24,7 @@
             this.btnExit.BackColor = System.Drawing.Color.DimGray;
             this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnExit.Location = new System.Drawing.Point(250, 361);
+            this.btnExit.Location = new System.Drawing.Point(152, 370);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(119, 57);
             this.btnExit.TabIndex = 1;
@@ -39,7 +39,7 @@
             this.mnuFile});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(618, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(424, 27);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,7 +74,7 @@
             this.btnVendor.BackColor = System.Drawing.Color.DimGray;
             this.btnVendor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendor.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnVendor.Location = new System.Drawing.Point(88, 177);
+            this.btnVendor.Location = new System.Drawing.Point(31, 177);
             this.btnVendor.Name = "btnVendor";
             this.btnVendor.Size = new System.Drawing.Size(140, 57);
             this.btnVendor.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.btnEntertainer.BackColor = System.Drawing.Color.DimGray;
             this.btnEntertainer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntertainer.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnEntertainer.Location = new System.Drawing.Point(377, 283);
+            this.btnEntertainer.Location = new System.Drawing.Point(252, 283);
             this.btnEntertainer.Name = "btnEntertainer";
             this.btnEntertainer.Size = new System.Drawing.Size(145, 57);
             this.btnEntertainer.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.btnVolunteer.BackColor = System.Drawing.Color.DimGray;
             this.btnVolunteer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolunteer.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnVolunteer.Location = new System.Drawing.Point(377, 177);
+            this.btnVolunteer.Location = new System.Drawing.Point(252, 177);
             this.btnVolunteer.Name = "btnVolunteer";
             this.btnVolunteer.Size = new System.Drawing.Size(145, 57);
             this.btnVolunteer.TabIndex = 5;
@@ -113,7 +113,7 @@
             this.btnVisitor.BackColor = System.Drawing.Color.DimGray;
             this.btnVisitor.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisitor.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnVisitor.Location = new System.Drawing.Point(88, 283);
+            this.btnVisitor.Location = new System.Drawing.Point(31, 283);
             this.btnVisitor.Name = "btnVisitor";
             this.btnVisitor.Size = new System.Drawing.Size(140, 57);
             this.btnVisitor.TabIndex = 6;
@@ -124,7 +124,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(302, 144);
             this.pictureBox1.TabIndex = 7;
@@ -133,7 +133,7 @@
             // frmMain
             // 
             this.BackColor = System.Drawing.Color.YellowGreen;
-            this.ClientSize = new System.Drawing.Size(618, 436);
+            this.ClientSize = new System.Drawing.Size(424, 457);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVisitor);
             this.Controls.Add(this.btnVolunteer);

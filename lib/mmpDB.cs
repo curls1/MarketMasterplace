@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Data.OleDb; // For OLE DB objects (also added reference to System.Data).
-using System.Collections; // For using ArrayLists.
-using System.IO; // For some file methods, when using file menus.
+using System.Data.OleDb;    // For OLE DB objects (also added reference to System.Data).
+using System.Collections;   // For using ArrayLists.
+using System.IO;            // For some file methods, when using file menus.
 using System.Configuration; // To access the app.config data (also add reference to System.Configuration).
-using System.Data; // for the love of data
+using System.Data;          // for the love of data
 
 namespace MarketMasterplace.lib
 {
