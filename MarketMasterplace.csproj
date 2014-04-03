@@ -83,11 +83,6 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="lib\MMPDB.cs" />
-    <Compile Include="lib\NLDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="lib\NLUtility.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,14 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="data\" />
-    <Folder Include="img\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="dev\oldcode.txt" />
-    <Content Include="dev\scratch.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

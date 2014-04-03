@@ -52,7 +52,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(130, 482);
+            this.dataGridView1.Location = new System.Drawing.Point(130, 321);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(661, 246);
@@ -85,7 +85,7 @@
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.button1.Location = new System.Drawing.Point(13, 682);
+            this.button1.Location = new System.Drawing.Point(130, 575);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 46);
@@ -209,7 +209,7 @@
             this.label7.BackColor = System.Drawing.Color.DimGray;
             this.label7.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.label7.Location = new System.Drawing.Point(243, 339);
+            this.label7.Location = new System.Drawing.Point(12, 251);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 19);
@@ -219,7 +219,7 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.textBox7.Location = new System.Drawing.Point(249, 374);
+            this.textBox7.Location = new System.Drawing.Point(18, 286);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(313, 27);
