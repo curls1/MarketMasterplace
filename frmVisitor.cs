@@ -4,23 +4,24 @@ using System.IO;                          // For some file methods, when using f
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
 
 
-
 namespace MarketMasterplace
 {
-    public partial class frmVendorDisplay : Form
+    public partial class frmVisitorApp : Form
     {
-        public static void VendorDisplay()
+        public static void Visitor()
         {
-            frmVendorDisplay vendorDisplay = new frmVendorDisplay();
-            Application.Run(vendorDisplay);
+            frmVisitorApp visitor = new frmVisitorApp();
+            Application.Run(visitor);
         }
-
-
-        public frmVendorDisplay()
+        
+        public frmVisitorApp()
         {
             InitializeComponent();
         }
 
+        private void frmVolunteerApp_Load(object sender, EventArgs e)
+        {
+            //MarketMasterplace.lib.NLUtility.validateInput(
+        }
     }
-
 }

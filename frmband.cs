@@ -5,22 +5,23 @@ using System.Configuration;               // To access the app.config data (also
 
 
 
-namespace MarketMasterplace
-{
-    public partial class frmVendorDisplay : Form
+    public partial class frmband : Form
     {
-        public static void VendorDisplay()
+        public static void Band()
         {
-            frmVendorDisplay vendorDisplay = new frmVendorDisplay();
-            Application.Run(vendorDisplay);
+            frmband band = new frmband();
+            Application.Run(band);
         }
 
-
-        public frmVendorDisplay()
+        public frmband()
         {
             InitializeComponent();
         }
 
-    }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
-}
+
+    }

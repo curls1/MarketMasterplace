@@ -6,11 +6,11 @@ using System.Collections;                 // For using ArrayLists.
 using System.IO;                          // For some file methods, when using file menus.
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
 
-// Name:   frmMain.cs has the C# code for XXXX
-// Author: Alka Harriger
-// Date:   4/1/13
+// Name:   MarketMasterplace (frmMain)
+// Author: Nicole Hands, Alex Hirsch, Zach Escallier, David McNutt
+// Date:   4/1/14
 //
-// This application gets XXX and then produces XXXX.
+// Description: This program will allow the Market Masters of the West Lafayette Farmer's Market to manage 
 
 public partial class frmMain : Form
 {
