@@ -53,7 +53,6 @@ namespace MarketMasterplace.lib
 
             mConn.Close();
         }
-
     }
 }
 

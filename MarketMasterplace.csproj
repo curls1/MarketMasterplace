@@ -82,17 +82,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="clsSQL.cs" />
-    <Compile Include="frmVendorDisplay.cs">
+    <Compile Include="frmVendDataEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendorDisplay.Designer.cs">
-      <DependentUpon>frmVendorDisplay.cs</DependentUpon>
+    <Compile Include="frmVendDataEntry.Designer.cs">
+      <DependentUpon>frmVendDataEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendorEntry.cs">
+    <Compile Include="frmVendViewDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendorEntry.Designer.cs">
-      <DependentUpon>frmVendorEntry.cs</DependentUpon>
+    <Compile Include="frmVendViewDetail.Designer.cs">
+      <DependentUpon>frmVendViewDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -113,11 +113,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendorDisplay.resx">
-      <DependentUpon>frmVendorDisplay.cs</DependentUpon>
+    <EmbeddedResource Include="frmVendDataEntry.resx">
+      <DependentUpon>frmVendDataEntry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendorEntry.resx">
-      <DependentUpon>frmVendorEntry.cs</DependentUpon>
+    <EmbeddedResource Include="frmVendViewDetail.resx">
+      <DependentUpon>frmVendViewDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisitor.resx">
       <DependentUpon>frmVisitor.cs</DependentUpon>

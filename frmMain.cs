@@ -5,6 +5,7 @@ using System.Data.OleDb;                  // For OLE DB objects (also added refe
 using System.Collections;                 // For using ArrayLists.
 using System.IO;                          // For some file methods, when using file menus.
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
+using MarketMasterplace; 
 
 // Name:   MarketMasterplace (frmMain)
 // Author: Nicole Hands, Alex Hirsch, Zach Escallier, David McNutt
@@ -22,181 +23,22 @@ public partial class frmMain : Form
         Application.Run(main);
     }
 
-    public frmMain()
-    {
-        InitializeComponent();
-    }
-
     // Class scope variables and objects.
     private string mUserFile;
     private OleDbConnection mDB;
-
-    // The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
-    // input form object and assigns the equivalent value to its corresponding variable. (This one handles int data.)
-    private bool validateInput(TextBox txtInput, int min, int max, out int userInput)
+    frmband band;
+    frmVendDataEntry vendDisplay;
+    frmVendViewDetail vendEntry;
+    frmVisitorApp visitor;
+    frmMain main; 
+    
+    public frmMain()
     {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = 0;
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a value for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        if (int.TryParse(txtInput.Text, out userInput) == false)
-        {
-            ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
-            txtInput.Focus();
-            return false;
-        }
-        if (userInput < min || userInput > max)
-        {
-            ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
-            txtInput.Focus();
-            return false;
-        }
-        return true;
-    }
-
-    // The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
-    // input form object and assigns the equivalent value to its corresponding variable. (This one handles double data.)
-    private bool validateInput(TextBox txtInput, double min, double max, out double userInput)
-    {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = 0D;
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a value for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        if (double.TryParse(txtInput.Text, out userInput) == false)
-        {
-            ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
-            txtInput.Focus();
-            return false;
-        }
-        if (userInput < min || userInput > max)
-        {
-            ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
-            txtInput.Focus();
-            return false;
-        }
-        return true;
-    }
-
-    // The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
-    // input form object and assigns the equivalent value to its corresponding variable. (This one handles decimal data.)
-    private bool validateInput(TextBox txtInput, decimal min, decimal max, out decimal userInput)
-    {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = 0M;
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a value for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        if (decimal.TryParse(txtInput.Text, out userInput) == false)
-        {
-            ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
-            txtInput.Focus();
-            return false;
-        }
-        if (userInput < min || userInput > max)
-        {
-            ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
-            txtInput.Focus();
-            return false;
-        }
-        return true;
-    }
-
-    // The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
-    // input form object and assigns the equivalent value to its corresponding variable. (This one handles DateTime data.)
-    private bool validateInput(TextBox txtInput, DateTime min, DateTime max, out DateTime userInput)
-    {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = DateTime.Parse("01/01/1900");
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a date in the format mm/dd/yyyy for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        if (DateTime.TryParse(txtInput.Text, out userInput) == false)
-        {
-            ShowMessage("Only dates are allowed for " + fieldName + ". Please re-enter:");
-            txtInput.Focus();
-            return false;
-        }
-        if (userInput < min || userInput > max)
-        {
-            ShowMessage(fieldName + " must be between " + min.ToShortDateString() + " and " + max.ToShortDateString());
-            txtInput.Focus();
-            return false;
-        }
-        return true;
-    }
-
-    // The overloaded validateInput helper methods handle the existence check for a given Boolean input form object 
-    // and assigns the equivalent value to its corresponding variable. 
-    private bool validateInput(TextBox txtInput, out bool userInput)
-    {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = false;
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a value for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        userInput = bool.Parse(txtInput.Text);
-        return true;
-    }
-
-    // The overloaded validateInput helper method handles the existence check for a given string input form object 
-    // and assigns the equivalent value to its corresponding variable. 
-    private bool validateInput(TextBox txtInput, out string userInput)
-    {
-        string fieldName;
-        fieldName = txtInput.Name.Substring(3);
-        userInput = "";
-        if (txtInput.Text == "")
-        {
-            ShowMessage("Please enter a value for " + fieldName);
-            txtInput.Focus();
-            return false;
-        }
-        userInput = txtInput.Text;
-        return true;
-    }
-
-    // The ShowMessage helper method displays an error message with a standard title and an OK button.
-    private void ShowMessage(string msg)
-    {
-        MessageBox.Show(msg, "Message from Application", MessageBoxButtons.OK);
-    }
-
-    // This helper method is used to open a connection to the database.
-    private void openDatabaseConnection()
-    {
-        string connectionString = ConfigurationManager.AppSettings["DBConnectionString"] + mUserFile;
-        mDB = new OleDbConnection(connectionString);
-    }
-
-    // This helper method releases the DB connection.
-    private void closeDatabaseConnection()
-    {
-        if (mDB != null)
-        {
-            mDB.Close();
-        }
+        InitializeComponent();
+        visitor = new frmVisitorApp();
+        vendEntry = new frmVendViewDetail();
+        band = new frmband();
+        vendDisplay = new frmVendDataEntry();
     }
 
     // When File-Exit is clicked, the program terminates.
@@ -229,7 +71,7 @@ public partial class frmMain : Form
         }
         catch (Exception ex)
         {
-            ShowMessage("There was an unexpected problem using the open file dialogue:" + ex.Message);
+            MarketMasterplace.lib.NLUtility.ShowMessage("There was an unexpected problem opening the file: " + ex.Message);
         }
 
         // Add code here to actually load the data and display where appropriate.
@@ -238,22 +80,232 @@ public partial class frmMain : Form
 
     private void btnVendor_Click(object sender, EventArgs e)
     {
-        
+        vendDisplay = new frmVendDataEntry(); //new instance of form
+        vendDisplay.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
+        vendDisplay.Show(); //show child form
+        this.Hide(); //hide parent form
+    }
+
+    //event handler for child form
+    private void vendDisplay_FormClosed(object sender, FormClosedEventArgs e)
+    {
+        this.Show(); //when the sub-form is closed, form main reappears
     }
 
     private void btnVolunteer_Click(object sender, EventArgs e)
     {
+        //volunteer = new frmVolunteer(); //new instance of form
+        //volunteer.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
+        //volunteer.Show(); //show child form
+        this.Hide(); //hide parent form
+    }
 
+    //event handler for child form
+    private void volunteer_FormClosed(object sender, FormClosedEventArgs e)
+    {
+        this.Show(); //when the sub-form is closed, form main reappears
     }
 
     private void btnVisitor_Click(object sender, EventArgs e)
     {
+        visitor = new frmVisitorApp(); //new instance of form
+        visitor.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
+        visitor.Show(); //show child form
+        this.Hide(); //hide parent form
+    }
 
+    //event handler for child form
+    private void visitor_FormClosed(object sender, FormClosedEventArgs e)
+    {
+        this.Show(); //when the sub-form is closed, form main reappears
     }
 
     private void btnEntertainer_Click(object sender, EventArgs e)
     {
-
+        band = new frmband(); //new instance of form
+        band.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
+        band.Show(); //show child form
+        this.Hide(); //hide parent form
     }
+
+    //event handler for child form
+    private void band_FormClosed(object sender, FormClosedEventArgs e)
+    {
+        this.Show(); //when the sub-form is closed, form main reappears
+    }
+    
+    
+    
+    
+    
+    
+    
+    //// The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
+    //// input form object and assigns the equivalent value to its corresponding variable. (This one handles int data.)
+    //private bool validateInput(TextBox txtInput, int min, int max, out int userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = 0;
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a value for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (int.TryParse(txtInput.Text, out userInput) == false)
+    //    {
+    //        ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (userInput < min || userInput > max)
+    //    {
+    //        ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    return true;
+    //}
+
+    //// The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
+    //// input form object and assigns the equivalent value to its corresponding variable. (This one handles double data.)
+    //private bool validateInput(TextBox txtInput, double min, double max, out double userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = 0D;
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a value for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (double.TryParse(txtInput.Text, out userInput) == false)
+    //    {
+    //        ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (userInput < min || userInput > max)
+    //    {
+    //        ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    return true;
+    //}
+
+    //// The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
+    //// input form object and assigns the equivalent value to its corresponding variable. (This one handles decimal data.)
+    //private bool validateInput(TextBox txtInput, decimal min, decimal max, out decimal userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = 0M;
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a value for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (decimal.TryParse(txtInput.Text, out userInput) == false)
+    //    {
+    //        ShowMessage("Only numbers are allowed for " + fieldName + ". Please re-enter:");
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (userInput < min || userInput > max)
+    //    {
+    //        ShowMessage(fieldName + " must be between " + min.ToString() + " and " + max.ToString());
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    return true;
+    //}
+
+    //// The overloaded validateInput helper methods handle the existence check, type check, and range check for a given 
+    //// input form object and assigns the equivalent value to its corresponding variable. (This one handles DateTime data.)
+    //private bool validateInput(TextBox txtInput, DateTime min, DateTime max, out DateTime userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = DateTime.Parse("01/01/1900");
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a date in the format mm/dd/yyyy for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (DateTime.TryParse(txtInput.Text, out userInput) == false)
+    //    {
+    //        ShowMessage("Only dates are allowed for " + fieldName + ". Please re-enter:");
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    if (userInput < min || userInput > max)
+    //    {
+    //        ShowMessage(fieldName + " must be between " + min.ToShortDateString() + " and " + max.ToShortDateString());
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    return true;
+    //}
+
+    //// The overloaded validateInput helper methods handle the existence check for a given Boolean input form object 
+    //// and assigns the equivalent value to its corresponding variable. 
+    //private bool validateInput(TextBox txtInput, out bool userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = false;
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a value for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    userInput = bool.Parse(txtInput.Text);
+    //    return true;
+    //}
+
+    //// The overloaded validateInput helper method handles the existence check for a given string input form object 
+    //// and assigns the equivalent value to its corresponding variable. 
+    //private bool validateInput(TextBox txtInput, out string userInput)
+    //{
+    //    string fieldName;
+    //    fieldName = txtInput.Name.Substring(3);
+    //    userInput = "";
+    //    if (txtInput.Text == "")
+    //    {
+    //        ShowMessage("Please enter a value for " + fieldName);
+    //        txtInput.Focus();
+    //        return false;
+    //    }
+    //    userInput = txtInput.Text;
+    //    return true;
+    //}
+
+    //// The ShowMessage helper method displays an error message with a standard title and an OK button.
+    //private void ShowMessage(string msg)
+    //{
+    //    MessageBox.Show(msg, "Message from Application", MessageBoxButtons.OK);
+    //}
+
+    //// This helper method is used to open a connection to the database.
+    //private void openDatabaseConnection()
+    //{
+    //    string connectionString = ConfigurationManager.AppSettings["DBConnectionString"] + mUserFile;
+    //    mDB = new OleDbConnection(connectionString);
+    //}
+
+    //// This helper method releases the DB connection.
+    //private void closeDatabaseConnection()
+    //{
+    //    if (mDB != null)
+    //    {
+    //        mDB.Close();
+    //    }
+    //}
 
 }
