@@ -12,7 +12,7 @@ namespace MarketMasterplace
 {
     public partial class frmVendViewDetail : Form
     {
-        public static void VendorEntry()
+        public static void VendorViewDetail()
         {
             frmVendViewDetail vendorEntry = new frmVendViewDetail();
             Application.Run(vendorEntry);
@@ -23,14 +23,24 @@ namespace MarketMasterplace
             InitializeComponent();
         }
 
+        frmVendDataEntry vendorDataEntry;
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            vendorDataEntry = new frmVendDataEntry();
+            vendorDataEntry.FormClosed += new FormClosedEventHandler(vendorEntry_FormClosed);
+            vendorDataEntry.Show();
+            this.Hide();
+        }
 
-        
-        
+        private void vendorEntry_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
     }
 }

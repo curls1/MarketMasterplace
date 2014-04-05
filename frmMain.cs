@@ -28,7 +28,7 @@ public partial class frmMain : Form
     private OleDbConnection mDB;
     frmband band;
     frmVendDataEntry vendDisplay;
-    frmVendViewDetail vendEntry;
+    frmVendViewDetail vendView;
     frmVisitorApp visitor;
     frmMain main; 
     
@@ -36,7 +36,7 @@ public partial class frmMain : Form
     {
         InitializeComponent();
         visitor = new frmVisitorApp();
-        vendEntry = new frmVendViewDetail();
+        vendView = new frmVendViewDetail();
         band = new frmband();
         vendDisplay = new frmVendDataEntry();
     }
@@ -80,9 +80,9 @@ public partial class frmMain : Form
 
     private void btnVendor_Click(object sender, EventArgs e)
     {
-        vendDisplay = new frmVendDataEntry(); //new instance of form
-        vendDisplay.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
-        vendDisplay.Show(); //show child form
+        vendView = new frmVendViewDetail(); //new instance of form
+        vendView.FormClosed += new FormClosedEventHandler(vendDisplay_FormClosed); //catch when child form is closed
+        vendView.Show(); //show child form
         this.Hide(); //hide parent form
     }
 

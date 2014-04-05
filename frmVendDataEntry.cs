@@ -22,13 +22,21 @@ namespace MarketMasterplace
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-       
-       
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
 }
