@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.IO;                          // For some file methods, when using file menus.
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
-using MarketMasterplace; 
+using MarketMasterplace;                  // Project namespace for access to project library files and abstracted code
 
 
 

@@ -5,7 +5,7 @@ using System.Data.OleDb;                  // For OLE DB objects (also added refe
 using System.Collections;                 // For using ArrayLists.
 using System.IO;                          // For some file methods, when using file menus.
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
-using MarketMasterplace; 
+using MarketMasterplace;                  // Project namespace for access to project library files and abstracted code
 
 // Name:   MarketMasterplace (frmMain)
 // Author: Nicole Hands, Alex Hirsch, Zach Escallier, David McNutt
@@ -30,8 +30,7 @@ public partial class frmMain : Form
     frmVendDataEntry vendDisplay;
     frmVendViewDetail vendView;
     frmVisitorApp visitor;
-    frmMain main; 
-    
+        
     public frmMain()
     {
         InitializeComponent();
@@ -55,28 +54,28 @@ public partial class frmMain : Form
 
     // When File-Open is clicked, the program gets the filename that the user wishes to use for the 
     // application & stores the name in the class-scope variable that other methods will use.
-    private void mnuFileOpen_Click(object sender, EventArgs e)
-    {
-        OpenFileDialog ofd;
-        try
-        {
-            ofd = new OpenFileDialog();
-            ofd.Title = "Select the database file to open";
-            ofd.Filter = "Database files (*.accdb)|*.accdb|All files (*.*)|*.*";
-            ofd.InitialDirectory = Path.Combine(Application.StartupPath, @"\Databases");
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                mUserFile = ofd.FileName;
-            }
-        }
-        catch (Exception ex)
-        {
-            MarketMasterplace.lib.NLUtility.ShowMessage("There was an unexpected problem opening the file: " + ex.Message);
-        }
+    //private void mnuFileOpen_Click(object sender, EventArgs e)
+    //{
+    //    OpenFileDialog ofd;
+    //    try
+    //    {
+    //        ofd = new OpenFileDialog();
+    //        ofd.Title = "Select the database file to open";
+    //        ofd.Filter = "Database files (*.accdb)|*.accdb|All files (*.*)|*.*";
+    //        ofd.InitialDirectory = Path.Combine(Application.StartupPath, @"\Databases");
+    //        if (ofd.ShowDialog() == DialogResult.OK)
+    //        {
+    //            mUserFile = ofd.FileName;
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        MarketMasterplace.lib.NLUtility.ShowMessage("There was an unexpected problem opening the file: " + ex.Message);
+    //    }
 
-        // Add code here to actually load the data and display where appropriate.
+    //    // Add code here to actually load the data and display where appropriate.
 
-    }
+    //}
 
     private void btnVendor_Click(object sender, EventArgs e)
     {

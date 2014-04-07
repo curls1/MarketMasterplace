@@ -5,7 +5,7 @@ using System.Data.OleDb;                  // For OLE DB objects (also added refe
 using System.Collections;                 // For using ArrayLists.
 using System.IO;                          // For some file methods, when using file menus.
 using System.Configuration;               // To access the app.config data (also add reference to System.Configuration).
-using MarketMasterplace; 
+using MarketMasterplace;                  // Project namespace for access to project library files and abstracted code
 
 
 namespace MarketMasterplace
@@ -42,5 +42,11 @@ namespace MarketMasterplace
         {
             this.Show();
         }
+        //remove function: x in data grid view
+        //get selected index
+        //confirm valid selection
+        //confirm user wants to remove record
+        //sql command to db - remove record executeNonQuery()
+
     }
 }

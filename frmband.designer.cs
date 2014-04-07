@@ -16,7 +16,6 @@
             this.lblContactEmail = new System.Windows.Forms.Label();
             this.lblContactPhone = new System.Windows.Forms.Label();
             this.lblperformancedate = new System.Windows.Forms.Label();
-            this.lstBands = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSearchPD = new System.Windows.Forms.Button();
             this.btnSortDate = new System.Windows.Forms.Button();
@@ -31,7 +30,9 @@
             this.txtContactPhone = new System.Windows.Forms.TextBox();
             this.txtPerformanceDate = new System.Windows.Forms.TextBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mnuFile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -139,16 +140,6 @@
             this.lblperformancedate.Size = new System.Drawing.Size(142, 19);
             this.lblperformancedate.TabIndex = 7;
             this.lblperformancedate.Text = "Performance Date:";
-            // 
-            // lstBands
-            // 
-            this.lstBands.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.lstBands.FormattingEnabled = true;
-            this.lstBands.ItemHeight = 19;
-            this.lstBands.Location = new System.Drawing.Point(305, 117);
-            this.lstBands.Name = "lstBands";
-            this.lstBands.Size = new System.Drawing.Size(478, 403);
-            this.lstBands.TabIndex = 8;
             // 
             // button1
             // 
@@ -286,10 +277,20 @@
             this.txtNotes.Size = new System.Drawing.Size(261, 27);
             this.txtNotes.TabIndex = 22;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(305, 124);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(461, 370);
+            this.dataGridView1.TabIndex = 23;
+            // 
             // frmband
             // 
             this.BackColor = System.Drawing.Color.YellowGreen;
             this.ClientSize = new System.Drawing.Size(795, 535);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.txtPerformanceDate);
             this.Controls.Add(this.txtContactPhone);
@@ -304,7 +305,6 @@
             this.Controls.Add(this.btnSortDate);
             this.Controls.Add(this.btnSearchPD);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lstBands);
             this.Controls.Add(this.lblperformancedate);
             this.Controls.Add(this.lblContactPhone);
             this.Controls.Add(this.lblContactEmail);
@@ -320,6 +320,7 @@
             this.Text = "Master Marketplace";
             this.mnuFile.ResumeLayout(false);
             this.mnuFile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +339,6 @@
     private System.Windows.Forms.Label lblContactEmail;
     private System.Windows.Forms.Label lblContactPhone;
     private System.Windows.Forms.Label lblperformancedate;
-    private System.Windows.Forms.ListBox lstBands;
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button btnSearchPD;
     private System.Windows.Forms.Button btnSortDate;
@@ -353,4 +353,5 @@
     private System.Windows.Forms.TextBox txtContactPhone;
     private System.Windows.Forms.TextBox txtPerformanceDate;
     private System.Windows.Forms.TextBox txtNotes;
+    private System.Windows.Forms.DataGridView dataGridView1;
 }

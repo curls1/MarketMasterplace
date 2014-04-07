@@ -35,9 +35,10 @@ namespace MarketMasterplace.lib
             mConn.Open();
 
             OleDbCommand cmd = new OleDbCommand(sql, mConn);
-            IDataAdapter da = new OleDbDataAdapter(cmd);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
+            da.Dispose();
 
             mConn.Close();
 

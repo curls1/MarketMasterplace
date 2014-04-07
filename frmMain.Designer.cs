@@ -11,6 +11,7 @@
             this.btnVolunteer = new System.Windows.Forms.Button();
             this.btnVisitor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -19,7 +20,7 @@
             this.btnExit.BackColor = System.Drawing.Color.DimGray;
             this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnExit.Location = new System.Drawing.Point(155, 329);
+            this.btnExit.Location = new System.Drawing.Point(179, 329);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(119, 57);
             this.btnExit.TabIndex = 1;
@@ -45,7 +46,7 @@
             this.btnEntertainer.BackColor = System.Drawing.Color.DimGray;
             this.btnEntertainer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntertainer.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnEntertainer.Location = new System.Drawing.Point(252, 244);
+            this.btnEntertainer.Location = new System.Drawing.Point(304, 244);
             this.btnEntertainer.Name = "btnEntertainer";
             this.btnEntertainer.Size = new System.Drawing.Size(145, 57);
             this.btnEntertainer.TabIndex = 4;
@@ -58,7 +59,7 @@
             this.btnVolunteer.BackColor = System.Drawing.Color.DimGray;
             this.btnVolunteer.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolunteer.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnVolunteer.Location = new System.Drawing.Point(252, 158);
+            this.btnVolunteer.Location = new System.Drawing.Point(304, 158);
             this.btnVolunteer.Name = "btnVolunteer";
             this.btnVolunteer.Size = new System.Drawing.Size(145, 57);
             this.btnVolunteer.TabIndex = 5;
@@ -82,16 +83,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(302, 144);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DimGray;
+            this.label1.Font = new System.Drawing.Font("Maiandra GD", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.label1.Location = new System.Drawing.Point(135, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(338, 45);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Market Masterplace";
+            // 
             // frmMain
             // 
             this.BackColor = System.Drawing.Color.YellowGreen;
-            this.ClientSize = new System.Drawing.Size(424, 398);
+            this.ClientSize = new System.Drawing.Size(485, 398);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVisitor);
             this.Controls.Add(this.btnVolunteer);
             this.Controls.Add(this.btnEntertainer);
@@ -103,6 +117,7 @@
             this.Name = "frmMain";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
 
@@ -114,4 +129,5 @@
     private System.Windows.Forms.Button btnVolunteer;
     private System.Windows.Forms.Button btnVisitor;
     private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.Label label1;
 }

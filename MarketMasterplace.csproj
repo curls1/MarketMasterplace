@@ -60,11 +60,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmband.cs">
+    <Compile Include="clsMarketAttend.cs" />
+    <Compile Include="clsComboBox.cs" />
+    <Compile Include="clsVisitor.cs" />
+    <Compile Include="frmBand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmband.designer.cs">
-      <DependentUpon>frmband.cs</DependentUpon>
+    <Compile Include="frmBand.designer.cs">
+      <DependentUpon>frmBand.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVisitor.cs">
       <SubType>Form</SubType>
@@ -107,8 +110,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmband.resx">
-      <DependentUpon>frmband.cs</DependentUpon>
+    <EmbeddedResource Include="frmBand.resx">
+      <DependentUpon>frmBand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

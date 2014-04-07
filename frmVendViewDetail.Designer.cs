@@ -52,7 +52,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.DimGray;
             this.btnBack.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(677, 108);
+            this.btnBack.Location = new System.Drawing.Point(704, 108);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(95, 54);
             this.btnBack.TabIndex = 1;
